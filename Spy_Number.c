@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int n,s=0,p=1,d;
+    int n,d,s=0,p=1;
     scanf("%d",&n);
-    for(;n>0;)
+    while(n!=0)
     {
         d=n%10;
+        n=n/10;
         s=s+d;
         p=p*d;
-        n=n/10;
     }
     if(s==p)
     {
@@ -19,3 +19,4 @@ int main()
         printf("Not Spy Number");
     }
 }
+ 
